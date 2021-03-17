@@ -5,7 +5,7 @@ import WordInputForm from "../components/WordInputForm.js";
 const FormContainer = () => {
   return (
     <div>
-      <Row>
+      <Row style={{ marginTop: "10rem" }}>
         <Col span={8} offset={8}>
           <Card>
             <WordInputForm />

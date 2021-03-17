@@ -1,5 +1,5 @@
 import React from "react";
-import { Form, Input, Button } from "antd";
+import { message, Form, Input, Button } from "antd";
 
 const WordInputForm = () => {
   const [form] = Form.useForm();
@@ -7,9 +7,9 @@ const WordInputForm = () => {
   const onFinish = (value) => {
     const reversedWord = value.word.split("").reverse().join("");
     if (reversedWord === value.word) {
-      return true;
+      return message.success("It's a palindrome!");
     } else {
-      return false;
+      return message.warning("Oops! It's not a palindrome.");
     }
   };
 
